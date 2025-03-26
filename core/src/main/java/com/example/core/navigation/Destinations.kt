@@ -12,6 +12,9 @@ object ChooseBaseCurrency
 @Serializable
 object Currencies
 
+@Serializable
+object Home
+
 
 //object RecipesList
 //

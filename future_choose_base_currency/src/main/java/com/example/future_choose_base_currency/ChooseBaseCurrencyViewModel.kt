@@ -41,7 +41,13 @@ class ChooseBaseCurrencyViewModel @Inject constructor(
         }
     }
 
-    fun setBaseCurrency(symbols:Symbols){
+    fun setBaseCurrency(symbols: Symbols) {
         _baseCurrencyState.value = baseCurrencyState.value.copy(baseCurrency = symbols)
+    }
+
+    fun saveBaseCurrency() {
+        viewModelScope.launch {
+            repository.saveBaseCurrency(baseCurrencyState.value.baseCurrency)
+        }
     }
 }

@@ -6,7 +6,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBarsPadding
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -20,6 +19,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.core.entity.Symbols
 import com.example.core.navigation.Currencies
+import com.example.core.navigation.Home
 import com.example.ui_kit.screns.BigTitle
 import com.example.ui_kit.screns.ButtonCenter
 import com.example.ui_kit.screns.ButtonWithTextLayout
@@ -42,7 +42,11 @@ fun ChooseBaseCurrencyScreen(
     ) {
         ChooseBaseCurrencyContent(
             navHostController = navHostController,
-            symbols = state.baseCurrency
+            symbols = state.baseCurrency,
+            {
+                viewModel.saveBaseCurrency()
+                navHostController.navigate(Home)
+            }
         )
     }
 }
@@ -51,6 +55,7 @@ fun ChooseBaseCurrencyScreen(
 fun ChooseBaseCurrencyContent(
     navHostController: NavHostController,
     symbols: Symbols,
+    onContinueClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     Column(modifier = modifier) {
@@ -92,7 +97,7 @@ fun ChooseBaseCurrencyContent(
                 stringResource(R.string.cont),
                 symbols.code.isNotEmpty()
                         || symbols.name.isNotEmpty(),
-                { navHostController.navigate(Currencies) },
+                { onContinueClick.invoke() },
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(top = AppTheme.sizes.larger)
@@ -104,17 +109,12 @@ fun ChooseBaseCurrencyContent(
 @Preview
 @Composable
 fun ChooseBaseCurrencyScreenPreview() {
-    Surface(
+    ChooseBaseCurrencyContent(
+        rememberNavController(),
+        symbols = Symbols(
+            code = "Usd",
+            name = "Adsdasdasd"
+        ), {},
         modifier = Modifier.background(AppTheme.colors.colorMainGreen)
-    ) {
-        ChooseBaseCurrencyContent(
-            rememberNavController(),
-            symbols = Symbols(
-                code = "Usd",
-                name = "Adsdasdasd"
-            )
-        )
-    }
-
-
+    )
 }

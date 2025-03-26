@@ -1,6 +1,7 @@
 package com.example.repository
 
 import com.example.network.CurrencyService
+import com.example.repository.mappers.SymbolsMapper
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

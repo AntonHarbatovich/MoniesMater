@@ -5,4 +5,5 @@ import kotlinx.coroutines.flow.Flow
 
 interface CurrencyRepository {
     suspend fun getSymbols(): Flow<Result<List<Symbols>>>
+    suspend fun saveBaseCurrency(baseCurrency: Symbols)
 }

@@ -1,4 +1,4 @@
-package com.example.repository
+package com.example.repository.mappers
 
 import com.example.core.entity.Symbols
 import com.example.network.dto.SymbolsDto
