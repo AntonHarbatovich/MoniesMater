@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_welcome">Welcome</string>
+    <string name="title_base_currency">You need to choose a base currency</string>
+    <string name="choose_base_currency">Choose a base currency</string>
+    <string name="cont">Continue</string>
+    <string name="title_currencies">Choose a currency</string>
+</resources>
