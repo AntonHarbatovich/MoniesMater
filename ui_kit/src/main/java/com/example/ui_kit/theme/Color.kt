@@ -11,6 +11,7 @@ object AppColors {
     val color_dark_mode_green_black = Color(0xFF031314)
     val color_background_dark_mode_and_letters = Color(0xFF052224)
     val color_dark_mode_green_bar = Color(0xFF0E3E3E)
+    val color_disable_dark_mode_green_bar = Color(0xB30E3E3E)
     val color_main_green = Color(0xFF00D09E)
     val color_disable_main_green = Color(0x8000D09E)
     val color_light_green = Color(0xFFDFF7E2)
@@ -25,6 +26,7 @@ interface MoniesMaterColors {
     val colorDarkModeGreenBlack: Color
     val colorBackgroundDarkModeAndLetters: Color
     val colorDarkModeGreenBar: Color
+    val colorDisableDarkModeGreenBar: Color
     val colorMainGreen: Color
     val colorLightGreen: Color
     val colorBackgroundGreenWhiteAndLetters: Color
@@ -45,6 +47,8 @@ fun lightThemeColors(): MoniesMaterColors = object : MoniesMaterColors {
         get() = AppColors.color_background_dark_mode_and_letters
     override val colorDarkModeGreenBar: Color
         get() = AppColors.color_dark_mode_green_bar
+    override val colorDisableDarkModeGreenBar: Color
+        get() = AppColors.color_disable_dark_mode_green_bar
     override val colorMainGreen: Color
         get() = AppColors.color_main_green
     override val colorLightGreen: Color
@@ -76,6 +80,8 @@ fun darkThemeColors(): MoniesMaterColors = object : MoniesMaterColors {
         get() = AppColors.color_background_dark_mode_and_letters
     override val colorDarkModeGreenBar: Color
         get() = AppColors.color_dark_mode_green_bar
+    override val colorDisableDarkModeGreenBar: Color
+        get() = AppColors.color_disable_dark_mode_green_bar
     override val colorMainGreen: Color
         get() = AppColors.color_main_green
     override val colorLightGreen: Color

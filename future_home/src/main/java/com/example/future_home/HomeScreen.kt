@@ -37,7 +37,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.example.core.entity.Account
-import com.example.core.navigation.Home
+import com.example.core.navigation.AddAccount
 import com.example.ui_kit.R
 import com.example.ui_kit.screns.AccountCard
 import com.example.ui_kit.screns.HomeAppBar
@@ -56,7 +56,7 @@ fun HomeScreen(
         topBar = {
             HomeAppBar(
                 "Hi, Welcome Back",
-                { navHostController.navigate(Home) },
+                { navHostController.navigate(AddAccount) },
                 modifier = Modifier.background(AppTheme.colors.colorMainGreen)
             )
         }

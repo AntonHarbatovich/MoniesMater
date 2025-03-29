@@ -7,4 +7,13 @@
     <string name="total_balance">Total Balance</string>
     <string name="total_expense">Total Expense</string>
     <string name="currency">Currency</string>
+    <string name="title_add_account">Add account</string>
+    <string name="account_name">Account name</string>
+    <string name="hint_account_name">Enter account name</string>
+    <string name="account_description">Account description</string>
+    <string name="hint_account_description">Enter account description</string>
+    <string name="account_type">Account type</string>
+    <string name="account_currency">Account currency</string>
+    <string name="account_balance">Account balance</string>
+    <string name="save">Save account</string>
 </resources>

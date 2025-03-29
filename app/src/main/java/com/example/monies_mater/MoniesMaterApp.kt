@@ -8,10 +8,12 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.core.navigation.AddAccount
 import com.example.core.navigation.ChooseBaseCurrency
 import com.example.core.navigation.Currencies
 import com.example.core.navigation.Home
 import com.example.core.navigation.Splash
+import com.example.future_add_account.AddAccountScreen
 import com.example.future_choose_base_currency.ChooseBaseCurrencyScreen
 import com.example.future_choose_base_currency.ChooseBaseCurrencyViewModel
 import com.example.future_choose_base_currency.CurrenciesScreen
@@ -57,6 +59,9 @@ fun MoniesMaterApp(
                         navHostController = navController,
 
                         )
+                }
+                composable<AddAccount> {
+                    AddAccountScreen()
                 }
             }
         }

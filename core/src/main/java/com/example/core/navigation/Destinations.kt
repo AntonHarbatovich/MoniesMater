@@ -15,6 +15,9 @@ object Currencies
 @Serializable
 object Home
 
+@Serializable
+object AddAccount
+
 
 //object RecipesList
 //
